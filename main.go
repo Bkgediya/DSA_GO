@@ -11,4 +11,8 @@ func main() {
 
 	value := arrays.TwoSum(nums, target)
 	fmt.Printf("%+v", value)
+
+	nums = []int{0, -1, 2, -3, 1}
+	triplet := arrays.TripletSum(nums)
+	fmt.Printf("%+v", triplet)
 }
