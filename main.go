@@ -15,4 +15,10 @@ func main() {
 	nums = []int{0, -1, 2, -3, 1}
 	triplet := arrays.TripletSum(nums)
 	fmt.Printf("%+v", triplet)
+
+	val_palindrome := "21.0.2.2021"
+
+	is_palindrome := arrays.Palindrome(val_palindrome)
+
+	fmt.Printf("%+v", is_palindrome)
 }

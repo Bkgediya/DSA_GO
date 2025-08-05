@@ -4,6 +4,8 @@ import (
 	"sort"
 )
 
+// time complexity O(n^2)
+// space complexity O(n)
 func TripletSum(nums []int) [][]int {
 	// sort the array
 	sort.Ints(nums)
