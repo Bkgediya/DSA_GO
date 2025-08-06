@@ -2,9 +2,15 @@ package hashmapsets
 
 func ValidateSudoku(nums [][]int) bool {
 	// struct{} is anonymous struct type with no field
-	rows := make(map[int]struct{})
-	cols := make(map[int]struct{})
-	grids := make(map[int]struct{})
+	rows := make([]map[int]struct{}, 9)
+	cols := make([]map[int]struct{}, 9)
+	grids := make([]map[int]struct{}, 9)
+
+	for i := 0; i < 9; i++ {
+		rows[i] = make(map[int]struct{})
+		cols[i] = make(map[int]struct{})
+		grids[i] = make(map[int]struct{})
+	}
 
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
@@ -14,21 +20,24 @@ func ValidateSudoku(nums [][]int) bool {
 				continue
 			}
 
-			if _, ok := rows[num]; ok {
+			if _, ok := rows[i][num]; ok {
 				return false
 			}
 
-			if _, ok := cols[num]; ok {
+			if _, ok := cols[j][num]; ok {
 				return false
 			}
-			if _, ok := grids[num]; ok {
+
+			// grid index
+			gridIndex := (i/3)*3 + (j / 3)
+			if _, ok := grids[gridIndex][num]; ok {
 				return false
 			}
 
 			// invoking struct type
-			rows[num] = struct{}{}
-			cols[num] = struct{}{}
-			grids[num] = struct{}{}
+			rows[i][num] = struct{}{}
+			cols[j][num] = struct{}{}
+			grids[gridIndex][num] = struct{}{}
 		}
 	}
 
