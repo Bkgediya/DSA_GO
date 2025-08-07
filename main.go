@@ -45,4 +45,15 @@ func main() {
 	is_valid_sudoku := hashmapsets.ValidateSudoku(grid_arr)
 	fmt.Printf("%+v", is_valid_sudoku)
 
+	fmt.Println()
+
+	striping_arr := [][]int{
+		{1, 2, 3, 4, 5},
+		{6, 0, 8, 9, 10},
+		{11, 12, 13, 14, 15},
+		{16, 17, 18, 19, 0},
+	}
+	zero_stripped_arr := hashmapsets.ZeroStriping(striping_arr)
+	fmt.Printf("%+v", zero_stripped_arr)
+
 }
