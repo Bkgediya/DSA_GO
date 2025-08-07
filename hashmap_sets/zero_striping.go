@@ -1,5 +1,7 @@
 package hashmapsets
 
+// question: For each zero in an m x n matrix. set its entire row and column to zero in place. 
+
 func ZeroStriping(grid [][]int) [][]int {
 	is_first_row_has_zero := false
 	is_first_col_has_zero := false
