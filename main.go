@@ -3,6 +3,8 @@ package main
 import (
 	"DSA_Go/arrays"
 	hashmapsets "DSA_Go/hashmap_sets"
+	linkedlist "DSA_Go/linked_list"
+	"DSA_Go/linked_list/models"
 	"fmt"
 )
 
@@ -54,6 +56,30 @@ func main() {
 		{16, 17, 18, 19, 0},
 	}
 	zero_stripped_arr := hashmapsets.ZeroStriping(striping_arr)
-	fmt.Printf("%+v", zero_stripped_arr)
+	fmt.Printf("%+v\n", zero_stripped_arr)
+
+	head := &models.ListNode{Val: 1}
+	head.Next = &models.ListNode{Val: 2}
+	head.Next.Next = &models.ListNode{Val: 3}
+
+	reverse_list := linkedlist.ReverseLinkedList(head)
+
+	for node := reverse_list; node != nil; node = node.Next {
+		fmt.Printf("%+v", node.Val)
+	}
+
+	head = &models.ListNode{Val: 1}
+	head.Next = &models.ListNode{Val: 2}
+	head.Next.Next = &models.ListNode{Val: 4}
+	head.Next.Next.Next = &models.ListNode{Val: 7}
+	head.Next.Next.Next.Next = &models.ListNode{Val: 3}
+
+	if err := linkedlist.RemoveNthNodeFromEnd(head, 2); err != nil {
+		fmt.Printf("%+v", err)
+	}
+
+	for node := head; node != nil; node = node.Next {
+		fmt.Printf("%+v\n", node.Val)
+	}
 
 }
