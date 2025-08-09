@@ -68,13 +68,15 @@ func main() {
 		fmt.Printf("%+v", node.Val)
 	}
 
+	fmt.Println()
 	head = &models.ListNode{Val: 1}
 	head.Next = &models.ListNode{Val: 2}
 	head.Next.Next = &models.ListNode{Val: 4}
 	head.Next.Next.Next = &models.ListNode{Val: 7}
 	head.Next.Next.Next.Next = &models.ListNode{Val: 3}
 
-	if err := linkedlist.RemoveNthNodeFromEnd(head, 2); err != nil {
+	head, err := linkedlist.RemoveNthNodeFromEnd(head, 3)
+	if err != nil {
 		fmt.Printf("%+v", err)
 	}
 
