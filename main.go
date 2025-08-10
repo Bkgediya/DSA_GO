@@ -74,6 +74,7 @@ func main() {
 	head.Next.Next = &models.ListNode{Val: 4}
 	head.Next.Next.Next = &models.ListNode{Val: 7}
 	head.Next.Next.Next.Next = &models.ListNode{Val: 3}
+	head.Next.Next.Next.Next.Next = &models.ListNode{Val: 10}
 
 	head, err := linkedlist.RemoveNthNodeFromEnd(head, 3)
 	if err != nil {
