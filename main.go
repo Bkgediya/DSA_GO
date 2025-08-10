@@ -68,7 +68,6 @@ func main() {
 		fmt.Printf("%+v", node.Val)
 	}
 
-	fmt.Println()
 	head = &models.ListNode{Val: 1}
 	head.Next = &models.ListNode{Val: 2}
 	head.Next.Next = &models.ListNode{Val: 4}
