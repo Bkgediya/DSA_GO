@@ -84,4 +84,20 @@ func main() {
 		fmt.Printf("%+v\n", node.Val)
 	}
 
+	fmt.Println()
+	fmt.Println()
+
+	lru := linkedlist.Constructor(2)
+
+	lru.Put(1, 1)           // cache: {1=1}
+	lru.Put(2, 2)           // cache: {2=2, 1=1}
+	fmt.Println(lru.Get(1)) // returns 1, cache: {1=1, 2=2}
+
+	lru.Put(3, 3)           // evicts 2, cache: {3=3, 1=1}
+	fmt.Println(lru.Get(2)) // returns -1
+
+	lru.Put(4, 4)           // evicts 1, cache: {4=4, 3=3}
+	fmt.Println(lru.Get(1)) // returns -1
+	fmt.Println(lru.Get(3)) // returns 3
+	fmt.Println(lru.Get(4)) // returns 4
 }
