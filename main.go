@@ -100,4 +100,14 @@ func main() {
 	fmt.Println(lru.Get(1))
 	fmt.Println(lru.Get(3))
 	fmt.Println(lru.Get(4))
+
+	// detect cuycle in linkedlist
+	head = &models.ListNode{Val: 1}
+	head.Next = &models.ListNode{Val: 2}
+	head.Next.Next = &models.ListNode{Val: 3}
+	head.Next.Next.Next = &models.ListNode{Val: 4}
+	head.Next.Next.Next.Next = head.Next
+
+	has_cycle := linkedlist.DetectCycle(head)
+	fmt.Printf("%+v\n", has_cycle)
 }
