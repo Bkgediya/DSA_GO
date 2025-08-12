@@ -110,4 +110,14 @@ func main() {
 
 	has_cycle := linkedlist.DetectCycle(head)
 	fmt.Printf("%+v\n", has_cycle)
+
+	head = &models.ListNode{Val: 1}
+	head.Next = &models.ListNode{Val: 2}
+	head.Next.Next = &models.ListNode{Val: 3}
+	head.Next.Next.Next = &models.ListNode{Val: 4}
+	head.Next.Next.Next.Next = &models.ListNode{Val: 5}
+	head.Next.Next.Next.Next.Next = &models.ListNode{Val: 6}
+
+	mid_node := linkedlist.FindListMiddlePoint(head)
+	fmt.Println(mid_node.Val)
 }
