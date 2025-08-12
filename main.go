@@ -120,4 +120,16 @@ func main() {
 
 	mid_node := linkedlist.FindListMiddlePoint(head)
 	fmt.Println(mid_node.Val)
+
+	tailNode := &models.ListNode{Val: 8}
+	tailNode.Next = &models.ListNode{Val: 10}
+
+	head = &models.ListNode{Val: 1}
+	head.Next = &models.ListNode{Val: 2}
+	head.Next.Next = &models.ListNode{Val: 3}
+	head.Next.Next.Next = tailNode
+	head2 := &models.ListNode{Val: 4}
+	head2.Next = &models.ListNode{Val: 5}
+	head2.Next.Next = tailNode
+
 }
