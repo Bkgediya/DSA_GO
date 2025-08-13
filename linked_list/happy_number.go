@@ -1,5 +1,7 @@
 package linkedlist
 
+// time complexity: O(log n)
+// space complexity: O(1)
 func IsHappyNumber(n int) bool {
 	slow, fast := n, n
 	for {
