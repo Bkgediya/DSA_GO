@@ -132,4 +132,8 @@ func main() {
 	head2.Next = &models.ListNode{Val: 5}
 	head2.Next.Next = tailNode
 
+	// find the happy number
+	happy_num := linkedlist.IsHappyNumber(116)
+	fmt.Printf("%+v\n", happy_num)
+
 }
