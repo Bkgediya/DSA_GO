@@ -5,6 +5,7 @@ import (
 	hashmapsets "DSA_Go/hashmap_sets"
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
+	"DSA_Go/sliding_window"
 	"fmt"
 )
 
@@ -135,5 +136,8 @@ func main() {
 	// find the happy number
 	happy_num := linkedlist.IsHappyNumber(116)
 	fmt.Printf("%+v\n", happy_num)
+
+	is_anagram := sliding_window.FindSlidingWindow("caabab", "aba")
+	fmt.Printf("sliding window count is %+v\n", is_anagram)
 
 }
