@@ -140,4 +140,7 @@ func main() {
 	is_anagram := sliding_window.FindSlidingWindow("caabab", "aba")
 	fmt.Printf("sliding window count is %+v\n", is_anagram)
 
+	subString_length := sliding_window.LongestSubstring("cabcdeca")
+	fmt.Printf("sliding window count is %+v\n", subString_length)
+
 }
