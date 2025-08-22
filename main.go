@@ -2,6 +2,7 @@ package main
 
 import (
 	"DSA_Go/arrays"
+	binarysearch "DSA_Go/binary_search"
 	hashmapsets "DSA_Go/hashmap_sets"
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
@@ -142,5 +143,13 @@ func main() {
 
 	subString_length := sliding_window.LongestSubstring("cabcdeca")
 	fmt.Printf("sliding window count is %+v\n", subString_length)
+
+	// longest uniform substring
+	longest_uniform_substring := sliding_window.FindLongestUniformSubstring("aabcdcca", 2)
+	fmt.Printf("longest uniform substring is %+v\n", longest_uniform_substring)
+
+	insertion_array := []int{1, 2, 4, 5, 7, 8, 9}
+	insertion_index := binarysearch.FindInsertionIndex(insertion_array, 6)
+	fmt.Printf("insertion index is %+v\n", insertion_index)
 
 }
