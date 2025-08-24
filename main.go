@@ -152,4 +152,8 @@ func main() {
 	insertion_index := binarysearch.FindInsertionIndex(insertion_array, 6)
 	fmt.Printf("insertion index is %+v\n", insertion_index)
 
+	occurance_array := []int{1, 2, 3, 4, 4, 4, 5, 6, 7, 8, 9, 10, 11}
+	occurance := binarysearch.FirstLastOccurance(occurance_array, 4)
+	fmt.Printf("occurance is %+v\n", occurance)
+
 }
