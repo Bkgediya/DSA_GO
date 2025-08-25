@@ -156,4 +156,9 @@ func main() {
 	occurance := binarysearch.FirstLastOccurance(occurance_array, 4)
 	fmt.Printf("occurance is %+v\n", occurance)
 
+	// cut enough wood
+	wood_array := []int{2, 6, 3, 8}
+	wood_cut := binarysearch.CuttingWood(wood_array, 7)
+	fmt.Printf("wood cut is %+v\n", wood_cut)
+
 }
