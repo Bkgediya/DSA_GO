@@ -161,4 +161,8 @@ func main() {
 	wood_cut := binarysearch.CuttingWood(wood_array, 7)
 	fmt.Printf("wood cut is %+v\n", wood_cut)
 
+	// find target in rotated array
+	rotated_array := []int{8, 9, 1, 2, 3, 4, 5, 6, 7}
+	target_index := binarysearch.FindTheTargetInRotatedArray(rotated_array, 5)
+	fmt.Printf("target index is %+v\n", target_index)
 }
