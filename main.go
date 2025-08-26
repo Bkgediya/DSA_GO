@@ -7,6 +7,7 @@ import (
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
 	"DSA_Go/sliding_window"
+	"DSA_Go/stack"
 	"fmt"
 )
 
@@ -165,4 +166,9 @@ func main() {
 	rotated_array := []int{8, 9, 1, 2, 3, 4, 5, 6, 7}
 	target_index := binarysearch.FindTheTargetInRotatedArray(rotated_array, 5)
 	fmt.Printf("target index is %+v\n", target_index)
+
+	// valid parenthesis
+
+	valid_parenthesis := stack.IsValidParenthesis("()[]{}")
+	fmt.Printf("valid parenthesis is %+v\n", valid_parenthesis)
 }
