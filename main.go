@@ -171,4 +171,8 @@ func main() {
 
 	valid_parenthesis := stack.IsValidParenthesis("()[][{[}]]")
 	fmt.Printf("valid parenthesis is %+v\n", valid_parenthesis)
+
+	// find the next large number to right
+	next_large_number := stack.FindNextLargeNumberToRight([]int{5, 2, 4, 6, 1})
+	fmt.Printf("next large number is %+v\n", next_large_number)
 }
