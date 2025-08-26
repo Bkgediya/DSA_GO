@@ -169,6 +169,6 @@ func main() {
 
 	// valid parenthesis
 
-	valid_parenthesis := stack.IsValidParenthesis("()[]{}")
+	valid_parenthesis := stack.IsValidParenthesis("()[][{[}]]")
 	fmt.Printf("valid parenthesis is %+v\n", valid_parenthesis)
 }

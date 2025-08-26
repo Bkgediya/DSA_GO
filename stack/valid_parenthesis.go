@@ -1,5 +1,7 @@
 package stack
 
+// tc: O(n)
+// sc: O(n)
 func IsValidParenthesis(s string) bool {
 	parenthesis_map := map[rune]rune{
 		'(': ')',
