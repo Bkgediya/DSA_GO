@@ -7,7 +7,7 @@ func FindNextLargeNumberToRight(nums []int) []int {
 	result := make([]int, n)
 
 	stack := []int{}
-
+ 
 	for i := n - 1; i >= 0; i-- {
 		for len(stack) > 0 && stack[len(stack)-1] < nums[i] {
 			stack = stack[:len(stack)-1]	

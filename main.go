@@ -175,4 +175,8 @@ func main() {
 	// find the next large number to right
 	next_large_number := stack.FindNextLargeNumberToRight([]int{5, 2, 4, 6, 1})
 	fmt.Printf("next large number is %+v\n", next_large_number)
+
+	// evaluate expression
+	evaluate_expression := stack.EvaluateExpression("18-(7+(2-4))")
+	fmt.Printf("evaluate expression is %+v\n", evaluate_expression)
 }
