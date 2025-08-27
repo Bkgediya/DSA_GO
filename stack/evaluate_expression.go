@@ -4,6 +4,8 @@ import (
 	"unicode"
 )
 
+// time complexity O(n)
+// space complexity O(n)
 func EvaluateExpression(expression string) int {
 	stack := []int{}
 	curr_num, sign, res := 0, 1, 0
