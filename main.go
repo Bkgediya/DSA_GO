@@ -4,6 +4,7 @@ import (
 	"DSA_Go/arrays"
 	binarysearch "DSA_Go/binary_search"
 	hashmapsets "DSA_Go/hashmap_sets"
+	"DSA_Go/heaps"
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
 	"DSA_Go/sliding_window"
@@ -179,4 +180,9 @@ func main() {
 	// evaluate expression
 	evaluate_expression := stack.EvaluateExpression("18-(7+(2-4))")
 	fmt.Printf("evaluate expression is %+v\n", evaluate_expression)
+
+	// top k frequent string max heap
+	arr_str := []string{"go", "coding", "byte", "byte", "go", "interview", "go"}
+	top_k_frequent := heaps.FindKMostFrequentString(arr_str, 2)
+	fmt.Printf("top k frequent is %+v\n", top_k_frequent)
 }
