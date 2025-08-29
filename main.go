@@ -185,4 +185,8 @@ func main() {
 	arr_str := []string{"go", "coding", "byte", "byte", "go", "interview", "go"}
 	top_k_frequent := heaps.FindKMostFrequentString(arr_str, 2)
 	fmt.Printf("top k frequent is %+v\n", top_k_frequent)
+
+	// top k frequent string max heap
+	top_k_frequent_min_heap := heaps.FindKMostFrequentString(arr_str, 2)
+	fmt.Printf("top k frequent is with min heap %+v\n", top_k_frequent_min_heap)
 }
