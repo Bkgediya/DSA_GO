@@ -189,4 +189,15 @@ func main() {
 	// top k frequent string max heap
 	top_k_frequent_min_heap := heaps.FindKMostFrequentString(arr_str, 2)
 	fmt.Printf("top k frequent is with min heap %+v\n", top_k_frequent_min_heap)
+
+	l1 := &models.ListNode{1, &models.ListNode{4, &models.ListNode{5, nil}}}
+	l2 := &models.ListNode{1, &models.ListNode{3, &models.ListNode{4, nil}}}
+	l3 := &models.ListNode{2, &models.ListNode{6, nil}}
+
+	merged := heaps.ComibineSortedLinkedList([]*models.ListNode{l1, l2, l3})
+
+	for merged != nil {
+		print(merged.Val, " ")
+		merged = merged.Next
+	}
 }
