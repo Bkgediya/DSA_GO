@@ -2,6 +2,8 @@ package heaps
 
 import "container/heap"
 
+// time: O(log n)
+// space: O(n)
 type MinMaxHeap struct {
 	low  MaxIntHeap // low half
 	high MinIntHeap // upper half
