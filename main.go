@@ -200,4 +200,11 @@ func main() {
 		print(merged.Val, " ")
 		merged = merged.Next
 	}
+
+	m := heaps.NewMedianFinder()
+	stream := []int{10, 2, 5, 7, 3, 9, 1, 6, 8, 4}
+	for _, x := range stream {
+		m.Add(x)
+		fmt.Printf("Added %-2d -> median = %.1f\n", x, m.FindMedian())
+	}
 }
