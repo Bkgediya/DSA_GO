@@ -5,6 +5,7 @@ import (
 	binarysearch "DSA_Go/binary_search"
 	hashmapsets "DSA_Go/hashmap_sets"
 	"DSA_Go/heaps"
+	"DSA_Go/intervals"
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
 	"DSA_Go/sliding_window"
@@ -207,4 +208,12 @@ func main() {
 		m.Add(x)
 		fmt.Printf("Added %-2d -> median = %.1f\n", x, m.FindMedian())
 	}
+
+	input := [][]int{
+		{1, 3},
+		{2, 6},
+		{8, 10},
+		{15, 18},
+	}
+	fmt.Println("Merged:", intervals.MergeOverlappingIntervals(input))
 }
