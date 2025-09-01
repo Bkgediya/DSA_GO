@@ -228,4 +228,14 @@ func main() {
 		{8, 9},
 	}
 	fmt.Println("Overlap:", intervals.FindAllIntervalsOverlap(interval1, interval2))
+
+	overlaps := [][]int{
+		{1, 3},
+		{2, 6},
+		{4, 8},
+		{6, 7},
+		{5, 7},
+	}
+	overlap_count := intervals.FindLargestIntervalsOverlap(overlaps)
+	fmt.Println("Overlap count:", overlap_count)
 }
