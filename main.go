@@ -216,4 +216,16 @@ func main() {
 		{15, 18},
 	}
 	fmt.Println("Merged:", intervals.MergeOverlappingIntervals(input))
+
+	// find overlap intervals
+	interval1 := [][]int{
+		{1, 4},
+		{5, 6},
+		{9, 10},
+	}
+	interval2 := [][]int{
+		{2, 7},
+		{8, 9},
+	}
+	fmt.Println("Overlap:", intervals.FindAllIntervalsOverlap(interval1, interval2))
 }

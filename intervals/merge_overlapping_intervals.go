@@ -2,6 +2,7 @@ package intervals
 
 import "sort"
 
+// time: O(nlogn) | space: O(n)
 func MergeOverlappingIntervals(intervalsArr [][]int) [][]int {
 	if len(intervalsArr) == 0 {
 		return [][]int{}
