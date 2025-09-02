@@ -7,6 +7,8 @@ type Point struct {
 	typ rune // 's' = start, 'e' = end
 }
 
+// tc: O(nlogn)
+
 func FindLargestIntervalsOverlap(intervals [][]int) int {
 	points := []Point{}
 	interval_largest := 0
