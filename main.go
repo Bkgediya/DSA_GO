@@ -240,7 +240,9 @@ func main() {
 	overlap_count := intervals.FindLargestIntervalsOverlap(overlaps)
 	fmt.Println("Overlap count:", overlap_count)
 
-	/// sums between range
+	/// sums between range // tc: O(n)
+	
+	// sc: O(n)
 	nums = []int{3, -7, 6, 0, -2, 5}
 	prefix_sums := []int{nums[0]}
 	for i := 1; i < len(nums); i++ {
