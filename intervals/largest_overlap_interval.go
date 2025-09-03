@@ -8,7 +8,7 @@ type Point struct {
 }
 
 // tc: O(nlogn)
-
+// sc: O(n)
 func FindLargestIntervalsOverlap(intervals [][]int) int {
 	points := []Point{}
 	interval_largest := 0

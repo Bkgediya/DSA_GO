@@ -8,6 +8,7 @@ import (
 	"DSA_Go/intervals"
 	linkedlist "DSA_Go/linked_list"
 	"DSA_Go/linked_list/models"
+	prefixsums "DSA_Go/prefix_sums"
 	"DSA_Go/sliding_window"
 	"DSA_Go/stack"
 	"fmt"
@@ -238,4 +239,13 @@ func main() {
 	}
 	overlap_count := intervals.FindLargestIntervalsOverlap(overlaps)
 	fmt.Println("Overlap count:", overlap_count)
+
+	/// sums between range
+	nums = []int{3, -7, 6, 0, -2, 5}
+	prefix_sums := []int{nums[0]}
+	for i := 1; i < len(nums); i++ {
+		prefix_sums = append(prefix_sums, prefix_sums[i-1]+nums[i])
+	}
+	sum_prefix := prefixsums.FindSumBetweenRange(2, 5, prefix_sums)
+	fmt.Println("Sum between range:", sum_prefix)
 }
