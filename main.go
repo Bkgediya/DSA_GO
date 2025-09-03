@@ -241,7 +241,7 @@ func main() {
 	fmt.Println("Overlap count:", overlap_count)
 
 	/// sums between range // tc: O(n)
-	
+
 	// sc: O(n)
 	nums = []int{3, -7, 6, 0, -2, 5}
 	prefix_sums := []int{nums[0]}
@@ -250,4 +250,10 @@ func main() {
 	}
 	sum_prefix := prefixsums.FindSumBetweenRange(2, 5, prefix_sums)
 	fmt.Println("Sum between range:", sum_prefix)
+
+	///
+	sum_array_k := []int{1, 2, -1, 1, 2}
+	k := 3
+	total := prefixsums.CalculateKSumSubarray(sum_array_k, k)
+	fmt.Println("Total:", total)
 }
