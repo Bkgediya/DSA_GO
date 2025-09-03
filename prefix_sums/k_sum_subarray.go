@@ -1,5 +1,7 @@
 package prefixsums
 
+// tc: O(n)
+// sc: O(n)
 func CalculateKSumSubarray(nums []int, k int) int {
 	total := 0
 	sum_freq_map := make(map[int]int)
