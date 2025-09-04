@@ -256,4 +256,9 @@ func main() {
 	k := 3
 	total := prefixsums.CalculateKSumSubarray(sum_array_k, k)
 	fmt.Println("Total:", total)
+
+	//
+	nums = []int{2, 3, 1, 4, 5}
+	ans := prefixsums.CalculateProductArrayExceptSelf(nums)
+	fmt.Println("Product array except self:", ans)
 }
