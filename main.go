@@ -278,4 +278,13 @@ func main() {
 	root_return := tree.InvertBinaryTree(root)
 
 	tree.InOrderTraversalOfTree(root_return)
+
+	root_t := &models.TreeNode{Val: 1}
+	root_t.Left = &models.TreeNode{Val: 2}
+	root_t.Left.Left = &models.TreeNode{Val: 3}
+	root_t.Left.Left.Left = &models.TreeNode{Val: 4}
+
+	is_balanced_tree := tree.BalancedBinaryTreeValidation(root_t)
+	fmt.Println(is_balanced_tree)
+
 }

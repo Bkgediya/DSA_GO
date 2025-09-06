@@ -2,6 +2,8 @@ package tree
 
 import "DSA_Go/linked_list/models"
 
+// tc: O(n)
+// sc: O(n)
 func InvertBinaryTree(root *models.TreeNode) *models.TreeNode {
 	if root == nil {
 		return nil
