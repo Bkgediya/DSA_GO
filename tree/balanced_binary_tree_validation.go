@@ -2,6 +2,8 @@ package tree
 
 import "DSA_Go/linked_list/models"
 
+//tc : O(n)
+//sc : O(n)
 func BalancedBinaryTreeValidation(root *models.TreeNode) bool {
 	return get_height_of_tree(root) != -1
 }
