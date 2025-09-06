@@ -5,3 +5,9 @@ type DoubleNode struct {
 	Next *DoubleNode
 	Prev *DoubleNode
 }
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}

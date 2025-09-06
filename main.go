@@ -11,6 +11,7 @@ import (
 	prefixsums "DSA_Go/prefix_sums"
 	"DSA_Go/sliding_window"
 	"DSA_Go/stack"
+	"DSA_Go/tree"
 	"fmt"
 )
 
@@ -261,4 +262,20 @@ func main() {
 	nums = []int{2, 3, 1, 4, 5}
 	ans := prefixsums.CalculateProductArrayExceptSelf(nums)
 	fmt.Println("Product array except self:", ans)
+
+	// trees
+	// invert binary tree
+	root := &models.TreeNode{Val: 4}
+	root.Left = &models.TreeNode{Val: 2}
+	root.Right = &models.TreeNode{Val: 7}
+	root.Left.Left = &models.TreeNode{Val: 1}
+	root.Left.Right = &models.TreeNode{Val: 3}
+	root.Right.Left = &models.TreeNode{Val: 6}
+	root.Right.Right = &models.TreeNode{Val: 9}
+
+	tree.InOrderTraversalOfTree(root)
+
+	root_return := tree.InvertBinaryTree(root)
+
+	tree.InOrderTraversalOfTree(root_return)
 }
