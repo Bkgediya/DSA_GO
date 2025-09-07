@@ -287,4 +287,12 @@ func main() {
 	is_balanced_tree := tree.BalancedBinaryTreeValidation(root_t)
 	fmt.Println(is_balanced_tree)
 
+	root_right := &models.TreeNode{Val: 1}
+	root_right.Left = &models.TreeNode{Val: 2}
+	root_right.Right = &models.TreeNode{Val: 3}
+	root_right.Left.Right = &models.TreeNode{Val: 5}
+	root_right.Right.Right = &models.TreeNode{Val: 4}
+
+	fmt.Println(tree.FindRightMostNodeInBinaryTree(root_right)) // Output: [1 3 4]
+
 }
