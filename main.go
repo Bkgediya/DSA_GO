@@ -11,6 +11,7 @@ import (
 	prefixsums "DSA_Go/prefix_sums"
 	"DSA_Go/sliding_window"
 	"DSA_Go/stack"
+	find_most_frequent "DSA_Go/test"
 	"DSA_Go/tree"
 	"fmt"
 )
@@ -294,5 +295,21 @@ func main() {
 	root_right.Right.Right = &models.TreeNode{Val: 4}
 
 	fmt.Println(tree.FindRightMostNodeInBinaryTree(root_right)) // Output: [1 3 4]
+
+	freq_arr := []int{3, 2, 3}
+	fmt.Println(find_most_frequent.FindTheMostFrequent(freq_arr)) // Output: 2
+
+	// find widest binary tree
+	wide_root := &models.TreeNode{Val: 1}
+	wide_root.Left = &models.TreeNode{Val: 2}
+	wide_root.Right = &models.TreeNode{Val: 3}
+	wide_root.Left.Left = &models.TreeNode{Val: 4}
+	wide_root.Left.Right = &models.TreeNode{Val: 5}
+	wide_root.Right.Right = &models.TreeNode{Val: 6}
+	wide_root.Left.Left.Left = &models.TreeNode{Val: 7}
+	wide_root.Left.Left.Right = &models.TreeNode{Val: 8}
+	wide_root.Left.Right.Right = &models.TreeNode{Val: 9}
+	wide_root.Right.Right.Right = &models.TreeNode{Val: 10} // Left of 6 is nil
+	fmt.Println(tree.FindWidestBinaryLevel(wide_root))
 
 }
