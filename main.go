@@ -303,13 +303,25 @@ func main() {
 	wide_root := &models.TreeNode{Val: 1}
 	wide_root.Left = &models.TreeNode{Val: 2}
 	wide_root.Right = &models.TreeNode{Val: 3}
+
 	wide_root.Left.Left = &models.TreeNode{Val: 4}
 	wide_root.Left.Right = &models.TreeNode{Val: 5}
-	wide_root.Right.Right = &models.TreeNode{Val: 6}
-	wide_root.Left.Left.Left = &models.TreeNode{Val: 7}
-	wide_root.Left.Left.Right = &models.TreeNode{Val: 8}
-	wide_root.Left.Right.Right = &models.TreeNode{Val: 9}
-	wide_root.Right.Right.Right = &models.TreeNode{Val: 10} // Left of 6 is nil
+	wide_root.Right.Right = &models.TreeNode{Val: 7}
+
+	wide_root.Left.Left.Left = &models.TreeNode{Val: 8}
+	wide_root.Left.Left.Right = &models.TreeNode{Val: 9}
+	wide_root.Left.Right.Right = &models.TreeNode{Val: 11}
+	wide_root.Right.Right.Right = &models.TreeNode{Val: 14} // Left of 6 is nil
 	fmt.Println(tree.FindWidestBinaryLevel(wide_root))
+
+	bst_root := &models.TreeNode{Val: 5}
+	bst_root.Left = &models.TreeNode{Val: 2}
+	bst_root.Right = &models.TreeNode{Val: 7}
+	bst_root.Left.Left = &models.TreeNode{Val: 1}
+	bst_root.Left.Right = &models.TreeNode{Val: 6}
+	bst_root.Right.Left = &models.TreeNode{Val: 7}
+	bst_root.Right.Right = &models.TreeNode{Val: 9}
+
+	fmt.Println(tree.BinarySearchTreeValidation(bst_root))
 
 }
