@@ -5,6 +5,9 @@ import (
 	"math"
 )
 
+// Binary Search Tree Validation
+// tc: O(n)
+// sc: O(n)
 func BinarySearchTreeValidation(root *models.TreeNode) bool {
 	return is_within_bound(root, math.Inf(-1), math.Inf(1))
 }
