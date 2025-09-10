@@ -1,5 +1,7 @@
 package hashmapsets
 
+// time complexity O(n^2)
+// space complexity O(n^2)
 func ValidateSudoku(nums [][]int) bool {
 	// struct{} is anonymous struct type with no field
 	rows := make([]map[int]struct{}, 9)
