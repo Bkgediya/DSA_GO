@@ -2,6 +2,8 @@ package tree
 
 import "DSA_Go/linked_list/models"
 
+// tc : O(n)
+// sc : O(n)
 var node *models.TreeNode
 
 func LowestCommonAncestor(root *models.TreeNode, p *models.TreeNode, q *models.TreeNode) *models.TreeNode {
