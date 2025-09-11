@@ -324,4 +324,19 @@ func main() {
 
 	fmt.Println(tree.BinarySearchTreeValidation(bst_root))
 
+	lca_root := &models.TreeNode{Val: 1}
+	lca_root.Left = &models.TreeNode{Val: 2}
+	lca_root.Right = &models.TreeNode{Val: 3}
+	lca_root.Left.Left = &models.TreeNode{Val: 4}
+	lca_root.Left.Right = &models.TreeNode{Val: 5}
+	lca_root.Right.Left = &models.TreeNode{Val: 6}
+	lca_root.Right.Right = &models.TreeNode{Val: 7}
+	lca_root.Right.Left.Left = &models.TreeNode{Val: 8}
+
+	node_p := &models.TreeNode{Val: 8}
+	node_q := &models.TreeNode{Val: 7}
+	lca := tree.LowestCommonAncestor(lca_root, node_p, node_q)
+	fmt.Println()
+	fmt.Printf("LCA struct: %+v\n", lca.Val)
+
 }
