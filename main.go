@@ -344,6 +344,22 @@ func main() {
 	root_pre_in := tree.BuildBinaryTree(preorder, inorder)
 	fmt.Printf("Preorder: %+v\n", root_pre_in)
 	PrintInorder(root_pre_in)
+	fmt.Println()
+
+	sum_root := &models.TreeNode{Val: 5}
+	sum_root.Left = &models.TreeNode{Val: -10}
+	sum_root.Right = &models.TreeNode{Val: 8}
+	sum_root.Left.Left = &models.TreeNode{Val: 1}
+	sum_root.Left.Right = &models.TreeNode{Val: -7}
+	sum_root.Left.Left.Left = &models.TreeNode{Val: 11}
+	sum_root.Left.Right.Left = &models.TreeNode{Val: -1}
+	sum_root.Right.Left = &models.TreeNode{Val: 9}
+	sum_root.Right.Right = &models.TreeNode{Val: 7}
+	sum_root.Right.Right.Left = &models.TreeNode{Val: 6}
+	sum_root.Right.Right.Right = &models.TreeNode{Val: -3}
+
+	sum_val := tree.FindContinousPathInTree(sum_root)
+	fmt.Println(sum_val)
 
 }
 
