@@ -339,4 +339,19 @@ func main() {
 	fmt.Println()
 	fmt.Printf("LCA struct: %+v\n", lca.Val)
 
+	preorder := []int{5, 9, 2, 3, 4, 7}
+	inorder := []int{2, 9, 5, 4, 3, 7}
+	root_pre_in := tree.BuildBinaryTree(preorder, inorder)
+	fmt.Printf("Preorder: %+v\n", root_pre_in)
+	PrintInorder(root_pre_in)
+
+}
+
+func PrintInorder(root *models.TreeNode) {
+	if root == nil {
+		return
+	}
+	PrintInorder(root.Left)
+	fmt.Print(root.Val, " ")
+	PrintInorder(root.Right)
 }
