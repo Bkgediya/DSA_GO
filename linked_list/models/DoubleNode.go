@@ -11,3 +11,8 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+
+type TrieNode struct {
+	children map[rune]*TreeNode
+	is_end
+}
