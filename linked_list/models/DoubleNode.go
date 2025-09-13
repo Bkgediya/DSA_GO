@@ -12,7 +12,3 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-type TrieNode struct {
-	children map[rune]*TreeNode
-	is_end
-}
