@@ -17,6 +17,9 @@ func NewTrie() *Trie {
 	}
 }
 
+// Insert a word into the trie
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 func (t *Trie) Insert(word string) {
 	node := t.root
 	for _, ch := range word {
@@ -26,4 +29,16 @@ func (t *Trie) Insert(word string) {
 		node = node.children[ch]
 	}
 	node.is_end = true
+}
+
+// Search a word in the trie
+// Time Complexity: O(n)
+func (t *Trie) Search(word string) bool {
+	node := t.root
+	for _, ch := range word {
+		if _, ok := node.children[ch]; !ok {
+			return false
+		}
+	}
+	return true
 }
