@@ -13,6 +13,7 @@ import (
 	"DSA_Go/stack"
 	find_most_frequent "DSA_Go/test"
 	"DSA_Go/tree"
+	"DSA_Go/tries"
 	"fmt"
 )
 
@@ -360,6 +361,14 @@ func main() {
 
 	sum_val := tree.FindContinousPathInTree(sum_root)
 	fmt.Println(sum_val)
+
+	trie := tries.NewTrie()
+	trie.Insert("band")
+	trie.Insert("rat")
+	fmt.Println(trie.SearchWithWildCard("ra.")) // true
+	fmt.Println(trie.SearchWithWildCard("b..")) // true
+	trie.Insert("ran")
+	fmt.Println(trie.SearchWithWildCard(".an")) // true
 
 }
 
