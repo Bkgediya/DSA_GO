@@ -370,6 +370,16 @@ func main() {
 	trie.Insert("ran")
 	fmt.Println(trie.SearchWithWildCard(".an")) // true
 
+	board := [][]rune{
+		{'b', 'y', 's'},
+		{'r', 't', 'e'},
+		{'a', 'i', 'n'},
+	}
+	words := []string{"byte", "bytes", "rat", "rain", "trait", "train"}
+
+	found := tries.FindAllWord(board, words)
+	fmt.Println("Found words:", found)
+
 }
 
 func PrintInorder(root *models.TreeNode) {
