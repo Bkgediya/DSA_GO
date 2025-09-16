@@ -1,5 +1,7 @@
 package tries
 
+// Time Complexity: O(k * L)
+// Space Complexity: O(k * L)
 type TrieNodeBoard struct {
 	children map[rune]*TrieNodeBoard
 	word     string
