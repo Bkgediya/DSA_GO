@@ -2,6 +2,8 @@ package graph
 
 import "DSA_Go/linked_list/models"
 
+// time complexity: O(V + E)
+// space complexity: O(V)
 func CloneGraph(node *models.GraphNode) *models.GraphNode {
 	if node == nil {
 		return nil
