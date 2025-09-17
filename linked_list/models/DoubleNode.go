@@ -6,9 +6,13 @@ type DoubleNode struct {
 	Prev *DoubleNode
 }
 
+type GraphNode struct {
+	Val       int
+	Neighbors []*GraphNode
+}
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
-

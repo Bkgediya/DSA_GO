@@ -3,6 +3,7 @@ package main
 import (
 	"DSA_Go/arrays"
 	binarysearch "DSA_Go/binary_search"
+	graph "DSA_Go/graphs"
 	hashmapsets "DSA_Go/hashmap_sets"
 	"DSA_Go/heaps"
 	"DSA_Go/intervals"
@@ -379,6 +380,21 @@ func main() {
 
 	found := tries.FindAllWord(board, words)
 	fmt.Println("Found words:", found)
+
+	node0 := &models.GraphNode{Val: 0}
+	node1 := &models.GraphNode{Val: 1}
+	node2 := &models.GraphNode{Val: 2}
+	node3 := &models.GraphNode{Val: 3}
+
+	node0.Neighbors = []*models.GraphNode{node1, node2}
+	node1.Neighbors = []*models.GraphNode{node0, node2}
+	node2.Neighbors = []*models.GraphNode{node0, node1, node3}
+	node3.Neighbors = []*models.GraphNode{node2}
+
+	clone := graph.CloneGraph(node0)
+
+	fmt.Println("Original node0:", node0, "neighbors:", len(node0.Neighbors))
+	fmt.Println("Cloned   node0:", clone, "neighbors:", len(clone.Neighbors))
 
 }
 
