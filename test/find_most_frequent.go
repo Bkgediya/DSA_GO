@@ -1,5 +1,7 @@
 package find_most_frequent
 
+// tc: O(n)
+// sc: O(n)
 func FindTheMostFrequent(nums []int) int {
 	if len(nums) == 0 {
 		return 0
