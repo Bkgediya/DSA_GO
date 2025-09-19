@@ -396,6 +396,11 @@ func main() {
 	fmt.Println("Original node0:", node0, "neighbors:", len(node0.Neighbors))
 	fmt.Println("Cloned   node0:", clone, "neighbors:", len(clone.Neighbors))
 
+	island_nums := [][]int{{1, 1, 0, 0}, {1, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}}
+	islandCount := graph.FindIsland(island_nums)
+
+	fmt.Println("Island count:", islandCount)
+
 }
 
 func PrintInorder(root *models.TreeNode) {
