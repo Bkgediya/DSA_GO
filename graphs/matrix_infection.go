@@ -1,5 +1,7 @@
 package graph
 
+// Tc : O(M.N)
+// Sc : O(M.N)
 func MatrixInfection(nums [][]int) int {
 	dirs := [][]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}
 	ones, seconds := 0, 0
