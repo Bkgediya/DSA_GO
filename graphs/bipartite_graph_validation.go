@@ -1,5 +1,7 @@
 package graph
 
+// tc : O(v+E)
+// sc :O(v)
 func BiparatiteValidation(nums [][]int) bool {
 	n := len(nums)
 	color := make([]int, n)
