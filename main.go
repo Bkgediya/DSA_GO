@@ -406,6 +406,11 @@ func main() {
 
 	fmt.Println("infectionSeconds:", infectionSeconds)
 
+		biparatite_nums := [][]int{{1, 4}, {0, 2}, {1}, {4}, {0, 3}}
+		isBiparatite := graph.BiparatiteValidation(biparatite_nums)
+	
+		fmt.Println("isBiparatite:", isBiparatite)
+
 }
 
 func PrintInorder(root *models.TreeNode) {
