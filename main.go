@@ -401,6 +401,11 @@ func main() {
 
 	fmt.Println("Island count:", islandCount)
 
+	infection_nums := [][]int{{1, 1, 1, 0}, {0, 0, 2, 0}, {0, 1, 1, 0}}
+	infectionSeconds := graph.MatrixInfection(infection_nums)
+
+	fmt.Println("infectionSeconds:", infectionSeconds)
+
 }
 
 func PrintInorder(root *models.TreeNode) {
