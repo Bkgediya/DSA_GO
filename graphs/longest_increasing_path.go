@@ -1,5 +1,7 @@
 package graph
 
+// tc : O(M*N)
+// sc : O(M*N)
 func LongestIncreasingPath(matrix [][]int) int {
 	if len(matrix) == 0 {
 		return 0
