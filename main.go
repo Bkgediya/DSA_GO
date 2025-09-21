@@ -406,10 +406,15 @@ func main() {
 
 	fmt.Println("infectionSeconds:", infectionSeconds)
 
-		biparatite_nums := [][]int{{1, 4}, {0, 2}, {1}, {4}, {0, 3}}
-		isBiparatite := graph.BiparatiteValidation(biparatite_nums)
-	
-		fmt.Println("isBiparatite:", isBiparatite)
+	biparatite_nums := [][]int{{1, 4}, {0, 2}, {1}, {4}, {0, 3}}
+	isBiparatite := graph.BiparatiteValidation(biparatite_nums)
+
+	fmt.Println("isBiparatite:", isBiparatite)
+
+	longestPath := [][]int{{1, 5, 8}, {3, 4, 4}, {7, 9, 2}}
+	path := graph.LongestIncreasingPath(longestPath)
+
+	fmt.Println("path:", path)
 
 }
 
