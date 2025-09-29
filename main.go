@@ -416,6 +416,15 @@ func main() {
 
 	fmt.Println("path:", path)
 
+	mergesize := 5
+	dsu := graph.NewDSU(mergesize)
+	dsu.Union(0, 1)
+	dsu.Union(1, 2)
+	fmt.Println(dsu.GetCommunitySize(3))
+	fmt.Println(dsu.GetCommunitySize(0)) 
+	dsu.Union(3, 4)
+	fmt.Println(dsu.GetCommunitySize(4)) 
+
 }
 
 func PrintInorder(root *models.TreeNode) {
