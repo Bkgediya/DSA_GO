@@ -10,6 +10,9 @@ package graph
 
 // Union-Find
 // Union: merge two groups.
+// time complexity : O(log(n))
+// Find: determine if two elements are in the same group.
+// time complexity : O(log(n))
 
 type DSU struct {
 	parents []int
