@@ -7,7 +7,6 @@ import (
 
 func ComibineSortedLinkedList(lists []*models.ListNode) *models.ListNode {
 	minListNodeHeap := NewMinHeapListNode()
-
 	// Add all the head nodes to the heap
 	for _, node := range lists {
 		if node != nil {
